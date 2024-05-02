@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT REGISTRATION FORM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <div class="one">
+            <h1>STUDENT REGISTRATION FORM</h1>
+            <table class="two">
+                <form>
+                    <tr>
+                        <td>
+                                <label for="firstname">FIRST NAME : </label>
+                        </td>
+                        <td>
+                                <input type="text" name="firstname" placeholder="Enter a first name" required="True">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="lastname">LAST NAME : </label>
+                        </td>
+                        <td>
+                                <input type="text" name="lastname" placeholder="Enter a last name" required="True">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="gender">GENDER : </label>
+                        </td>
+                        <td>
+                                <input type="radio" name="gender" required="True">Male</input>
+                                <input type="radio" name="gender" required="True">Female</input> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="department">DEPARTMENT : </label>
+                        </td>
+                        <td>
+                                <select name="department" placeholder="select your department" required="True">
+                                    <option>Select Department</option>
+                                    <option>CSE</option>
+                                    <option>IT</option>
+                                    <option>ECE</option>
+                                    <option>MECH</option>
+                                    <option>EEE</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="studentage">STUDENT AGE : </label>
+                        </td>
+                        <td>
+                                <input type="number" name="studentage" placeholder="Enter your age" required="True">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="dateofbirth">DATE OF BIRTH : </label>
+                        </td>
+                        <td>
+                                <input type="date" name="dateofbirth" placeholder="mm-dd-yyyy" required="True">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="email">EMAIL ADDRESS : </label>
+                        </td>
+                        <td>
+                                <input type="email" name="email" placeholder="Enter your email" required="True">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="phonenumber">PHONE NUMBER : </label>
+                        </td>
+                        <td>
+                                <input type="tel" name="phonenumber" placeholder="Enter your phone number" required="True">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="address">ADDRESS : </label>
+                        </td>
+                        <td>
+                                <textarea name="address" placeholder="Enter your address" required="True"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="state">STATE : </label>
+                        </td>
+                        <td>
+                                <select name="state" placeholder="select your state" required="True">
+                                    <option>Select State</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Kerala</option>
+                                    <option>Karnataka</option>
+                                    <option>Telangana</option>
+                        </td>
+                    </tr>
+                </form>
+            </table><br>
+            <div class="three">
+                <button input="submit">SUBMIT</button>
+                <button input="reset">RESET</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(233, 222, 243);
+}
+.one{
+    background-color: rgb(145, 109, 180);
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10%;
+    padding: 30px;
+    border: 2px solid rgb(86, 29, 139);
+    color: white;
+    border-radius: 20px;
+}
+h1{
+    padding-left: 30px;
+    color:black
+}
+input,select,textarea{
+    border-radius: 5px;
+    border-color: rgb(212, 201, 222);
+}
+.two{
+    color:white;
+    padding-left:120px;
+}
+.three{
+    margin-left: 200px;
+}
