@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+    .formcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+    position: relative;
+}
+
+#form{
+    background-color: white;
+    height: 400px;
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    display: block;
+}
+
+#form h1{
+    text-align: center;
+}
+
+#form input{
+    padding: 10px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+#form input::placeholder{
+   font-size: 20px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#form .forgetpassword{
+    margin-top: 20px;
+
+}
+.login{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    background-color: #3d5cb8;
+    color: white;
+    border-radius: 20px;
+}
+.forgetpassword a{
+    text-decoration: none;
+}
+.signup_button{
+    margin-top: 20px;
+    text-align: center;
+}
+.signup_button a{
+    text-decoration: none;
+
+}
+    </style>
+</head>
+<body>
+    <div class="formcontainer">
+        <form action="/login" method="post"  id="form">
+            <h1>LOGIN</h1>
+            <input type="text" name="" id="username" placeholder="Username">
+        <br>
+            <input type="password" name="" id="password" placeholder="Password">
+            <p href="#" class="forgetpassword" >  <a href="">Forget Password?</a> </p>
+            <button class="login" >LOGIN</button>
+            <p class="signup_button">Not a member? <a href="register.html">Signup</a> </p>
+        </form>
+    </div>
+</body>
+</html>
