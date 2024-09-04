@@ -1,0 +1,350 @@
+<!-- Title : FLIGHT BOOKING
+Author : TAMILARASAN M
+Created At : 24-05-2024
+Last Modified Date : 08-07-2024
+Reviewed By :
+Review Date : -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Information</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+        .passenger_body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background: #f1f5f9;
+        }
+
+        .passenger_container {
+            height: auto;
+            max-width: 850px;
+            width: 100%;
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .passenger_header {
+            font-size: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .passenger_info label {
+            height: 30px;
+            margin: 20px;
+            padding-left: 30px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .payment_btn button {
+            cursor: pointer;
+            border-radius: 25px;
+            border: none;
+            font-size: 15px;
+            padding: 0.75rem 2rem;
+            outline: none;
+            background-color: #334c99;
+            color: white;
+        }
+
+        .payment_btn {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .payment_btn button:hover {
+            background-color: white;
+            color: #334c99;
+            border: #334c99 solid 1px;
+        }
+
+        .passenger_info input, textarea, select {
+            margin-left: 10px;
+            height: 30px;
+            outline: none;
+            border: none;
+            background-color: white;
+            border-bottom: 1px solid black;
+        }
+
+        .passenger_info input::placeholder {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+        }
+
+        .passenger_info textarea::placeholder {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+        }
+
+        .passenger_info input[type="radio"] {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav__logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .nav__links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .link a {
+            font-weight: 500;
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            color: #0f172a;
+        }
+
+        .btn {
+            padding: 12px 40px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #ffffff;
+            background-color: #3d5cb8;
+            border: none;
+            border-radius: 32px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #334c99;
+        }
+        .passenger_info h1 {
+            text-align: center; 
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body class="passenger_body">
+    <nav class="nav_bar">
+        <div class="nav__logo">FLIGHT BOOKING</div>
+        <ul class="nav__links">
+            <li class="link"><a href="/index">Home</a></li>
+            <li class="link"><a href="/destinations">Popular Destinations</a></li>
+            <li class="link"><a href="/mybookings">MY Bookings</a></li>
+            <li class="link"><a href="#about_footer">About</a></li>
+        </ul>
+        <a href="search"><button class="btn">Back</button></a>
+    </nav>
+
+    <div class="passenger_container">
+        <div class="passenger_header">
+            <h1 id="passengerHeader">PASSENGER INFORMATION 1</h1>
+        </div>
+        <div id="passengerForms">
+            <div class="passenger_info" id="passengerInfo_1">
+                <form class="passenger_form" id="passengerForm_1" action="/auth/passenger" method="post">
+                    <table>
+                        <tr>
+                            <td><label for="fullname_1">Full Name</label></td>
+                            <td><input type="text" name="fullname_1" id="fullname_1" placeholder="Enter full name" required></td>
+                            <td><label for="dob_1">Date of Birth</label></td>
+                            <td><input type="text" name="dob_1" id="dob_1" placeholder="Enter Date of Birth" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Gender</label></td>
+                            <td>
+                                <input type="radio" name="gender_1" value="Male" required> Male
+                                <input type="radio" name="gender_1" value="Female" required> Female
+                            </td>
+                            <td><label for="email_1">Email Address</label></td>
+                            <td><input type="email" name="email_1" id="email_1" placeholder="Enter your email" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phoneNumber_1">Phone Number</label></td>
+                            <td><input type="tel" name="phoneNumber_1" id="phoneNumber_1" placeholder="Enter your phone number" required></td>
+                            <td><label for="bookingClass_1">Class</label></td>
+                            <td>
+                                <select name="bookingClass_1" id="bookingClass_1" required>
+                                    <option value="Economy">Select Class</option>
+                                    <option value="Economy">Economy</option>
+                                    <option value="Business">Business</option>
+                                    <option value="First">First</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="alternatePhone_1">Alternate Number</label></td>
+                            <td><input type="tel" name="alternatePhone_1" id="alternatePhone_1" placeholder="Enter alternate phone number" required></td>
+                            <td><label for="passengerAge_1">Age</label></td>
+                            <td><input type="number" name="passengerAge_1" id="passengerAge_1" placeholder="Enter your age" required></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="payment_btn">
+            <button id="addBox"  style="margin-left: 40px;">Add Member</button>
+            <button id="pay-process" style="margin-left: 220px">Proceed to payment</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const randomPrice = localStorage.getItem("randomPrice");
+            console.log("randomPrice from localStorage:", randomPrice);
+
+            let passengerCount = 1; 
+
+            // Function to calculate total price
+            function calculateTotalPrice() {
+                const total_price = passengerCount * parseInt(randomPrice);
+                console.log("Total price:", total_price);
+                localStorage.setItem("total_price", total_price);
+                document.getElementById("totalPrice").textContent = "Total price: Rs. " + total_price;
+            }
+
+            // Function to add a new passenger form
+            function addPassengerForm() {
+                passengerCount++;
+                const passengerInfo = document.createElement("div");
+                passengerInfo.classList.add("passenger_info");
+                passengerInfo.id = "passengerInfo_" + passengerCount;
+                passengerInfo.innerHTML = `
+                <br>
+                    <h1 id="passengerHeader_${passengerCount}">PASSENGER INFORMATION ${passengerCount}</h1>
+                    <form class="passenger_form" id="passengerForm_${passengerCount}" action="/auth/passenger" method="post">
+                        <table>
+                            <tr>
+                                <td><label for="fullname_${passengerCount}">Full Name</label></td>
+                                <td><input type="text" name="fullname_${passengerCount}" id="fullname_${passengerCount}" placeholder="Enter full name" required></td>
+                                <td><label for="dob_${passengerCount}">Date of Birth</label></td>
+                                <td><input type="text" name="dob_${passengerCount}" id="dob_${passengerCount}" placeholder="Enter Date of Birth" required></td>
+                            </tr>
+                            <tr>
+                                <td><label>Gender</label></td>
+                                <td>
+                                    <input type="radio" name="gender_${passengerCount}" value="Male" required> Male
+                                    <input type="radio" name="gender_${passengerCount}" value="Female" required> Female
+                                </td>
+                                <td><label for="email_${passengerCount}">Email Address</label></td>
+                                <td><input type="email" name="email_${passengerCount}" id="email_${passengerCount}" placeholder="Enter your email" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="phoneNumber_${passengerCount}">Phone Number</label></td>
+                                <td><input type="tel" name="phoneNumber_${passengerCount}" id="phoneNumber_${passengerCount}" placeholder="Enter your phone number" required></td>
+                                <td><label for="bookingClass_${passengerCount}">Class</label></td>
+                                <td>
+                                    <select name="bookingClass_${passengerCount}" id="bookingClass_${passengerCount}" required>
+                                        <option value="Economy">Select Class</option>
+                                        <option value="Economy">Economy</option>
+                                        <option value="Business">Business</option>
+                                        <option value="First">First</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="alternatePhone_${passengerCount}">Alternate Number</label></td>
+                                <td><input type="tel" name="alternatePhone_${passengerCount}" id="alternatePhone_${passengerCount}" placeholder="Enter alternate phone number" required></td>
+                                <td><label for="passengerAge_${passengerCount}">Age</label></td>
+                                <td><input type="number" name="passengerAge_${passengerCount}" id="passengerAge_${passengerCount}" placeholder="Enter your age" required></td>
+                            </tr>
+                        </table>
+                    </form>
+                `;
+                document.getElementById("passengerForms").appendChild(passengerInfo);
+            }
+
+           
+            document.getElementById("addBox").addEventListener("click", function(event) {
+                event.preventDefault();
+                if (passengerCount < 2) { 
+                    addPassengerForm();
+                } else {
+                    alert("Maximum passenger limit reached"); 
+                }
+            });
+
+            // Handle form submission on "Proceed to payment" button click
+            document.getElementById("pay-process").addEventListener("click", function(event) {
+                event.preventDefault();
+                let allFormsValid = true;
+
+                // Validate each form before proceeding to payment
+                for (let i = 1; i <= passengerCount; i++) {
+                    const fullname = document.getElementById(`fullname_${i}`).value;
+                    const dob = document.getElementById(`dob_${i}`).value;
+                    const gender = document.querySelector(`input[name="gender_${i}"]:checked`) ? document.querySelector(`input[name="gender_${i}"]:checked`).value : '';
+                    const email = document.getElementById(`email_${i}`).value;
+                    const phoneNumber = document.getElementById(`phoneNumber_${i}`).value;
+                    const bookingClass = document.getElementById(`bookingClass_${i}`).value;
+                    const alternatePhone = document.getElementById(`alternatePhone_${i}`).value;
+                    const passengerAge = document.getElementById(`passengerAge_${i}`).value;
+
+                    if (!fullname || !dob || !gender || !email || !phoneNumber || !bookingClass || !alternatePhone || !passengerAge) {
+                        alert(`Please fill in all fields for Passenger ${i}.`);
+                        allFormsValid = false;
+                        break;
+                    }
+                }
+
+                if (allFormsValid) {
+                    // Create a form element dynamically
+                    const form = document.createElement("form");
+                    form.method = "post";
+                    form.action = "/auth/passenger";
+
+                    // Append each input to the form
+                    for (let i = 1; i <= passengerCount; i++) {
+                        form.appendChild(document.getElementById(`fullname_${i}`).cloneNode(true));
+                        form.appendChild(document.getElementById(`dob_${i}`).cloneNode(true));
+                        form.appendChild(document.querySelector(`input[name="gender_${i}"]:checked`).cloneNode(true));
+                        form.appendChild(document.getElementById(`email_${i}`).cloneNode(true));
+                        form.appendChild(document.getElementById(`phoneNumber_${i}`).cloneNode(true));
+                        form.appendChild(document.getElementById(`bookingClass_${i}`).cloneNode(true));
+                        form.appendChild(document.getElementById(`alternatePhone_${i}`).cloneNode(true));
+                        form.appendChild(document.getElementById(`passengerAge_${i}`).cloneNode(true));
+                    }
+
+                    document.body.appendChild(form);
+                    form.submit(); 
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!-- Title : FLIGHT BOOKING
+Author : TAMILARASAN M
+Created At : 24-05-2024
+Last Modified Date : 08-07-2024
+Reviewed By :
+Review Date : -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+    
+</head>
+<body>
+    <div class="Table">
+        <header>
+            <h1>INFORMATION</h1>
+        </header>
+        <div class="EventList">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>FROM LOCATION</th>
+                        <th>TO LOCATION</th>
+                        <th>DEPARTURE DATE</th>
+                        <th>RETURN DATE</th>
+                        <th>CLASS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each rows}}
+                    <tr>
+                        <td>{{this.ID}}</td>
+                        <td>{{this.FROMLOCATION}}</td>
+                        <td>{{this.TOLOCATION}}</td>
+                        <td>{{this.DEPARTUREDATE}}</td>
+                        <td>{{this.RETURNDATE}}</td>
+                        <td>{{this.CLASS}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Elegant Edge Events. All rights reserved.</p>
+    </footer>
+</body>
+</html>
