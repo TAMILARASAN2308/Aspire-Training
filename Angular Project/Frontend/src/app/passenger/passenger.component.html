@@ -1,0 +1,73 @@
+ <!-- Title : FLIGHT BOOKING
+ Author : TAMILARASAN M
+ Created At : 24-03-2024
+ Last Modified Date : 08-06-2024
+ Reviewed By :
+ Review Date : -->
+
+<app-nav></app-nav>
+<div class="passenger-section">
+  <div class="passenger-wrapper">
+    <div class="passenger-header">
+      <h1 class="passenger-header-title">PASSENGER INFORMATION {{ passengerCount }}</h1>
+    </div>
+    <div id="passengerForms">
+      <form *ngFor="let formData of passengerForms; let i = index" (ngSubmit)="handleFormSubmit()">
+        <table>
+          <tbody>
+            <tr>
+              <td><label class="passenger-form-label">Full Name</label></td>
+              <td>
+                <input class="passenger-input" type="text" name="fullname" [(ngModel)]="formData.fullname" placeholder="Enter full name" required />
+              </td>
+              <td><label class="passenger-form-label">Date of Birth</label></td>
+              <td>
+                <input class="passenger-input" type="text" name="dob" [(ngModel)]="formData.dob" placeholder="Enter Date of Birth" required />
+              </td>
+            </tr>
+            <tr>
+              <td><label class="passenger-form-label">Gender</label></td>
+              <td>
+                <input class="passenger-input" type="radio" name="gender" value="Male" [(ngModel)]="formData.gender" required /> Male
+                <input class="passenger-input" type="radio" name="gender" value="Female" [(ngModel)]="formData.gender" required /> Female
+              </td>
+              <td><label class="passenger-form-label">Email Address</label></td>
+              <td>
+                <input class="passenger-input" type="email" name="email" [(ngModel)]="formData.email" placeholder="Enter your email" required />
+              </td>
+            </tr>
+            <tr>
+              <td><label class="passenger-form-label">Phone Number</label></td>
+              <td>
+                <input class="passenger-input" type="tel" name="phoneNumber" [(ngModel)]="formData.phoneNumber" placeholder="Enter your phone number" required />
+              </td>
+              <td><label class="passenger-form-label">Class</label></td>
+              <td>
+                <select class="passenger-select" name="bookingClass" [(ngModel)]="formData.bookingClass" required>
+                  <option value="">Select Class</option>
+                  <option value="Economy">Economy</option>
+                  <option value="Business">Business</option>
+                  <option value="First">First</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label class="passenger-form-label">Alternate Number</label></td>
+              <td>
+                <input class="passenger-input" type="tel" name="alternatePhone" [(ngModel)]="formData.alternatePhone" placeholder="Enter alternate phone number" required />
+              </td>
+              <td><label class="passenger-form-label">Age</label></td>
+              <td>
+                <input class="passenger-input" type="text" name="passengerAge" [(ngModel)]="formData.passengerAge" placeholder="Enter your age" required />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <div class="button-container">
+      <button class="passenger-form-button" (click)="addPassengerForm()" style="margin-left: 40px;">Add Member</button>
+      <button class="passenger-form-button" (click)="handleFormSubmit()" style="margin-left: 220px;">Proceed to payment</button>
+    </div>
+  </div>
+</div>

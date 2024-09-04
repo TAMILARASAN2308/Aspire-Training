@@ -1,0 +1,62 @@
+<!-- Title : FLIGHT BOOKING
+ Author : TAMILARASAN M
+ Created At : 24-03-2024
+ Last Modified Date : 08-06-2024
+ Reviewed By :
+ Review Date : -->
+ 
+<div>
+  <nav class="ticket-nav">
+    <div class="ticket-logo">
+      <span>FLIGHT BOOKING</span>
+    </div>
+    <div class="ticket-header">
+      <span>E-TICKET</span>
+    </div>
+  </nav>
+  <hr class="ticket-divider" />
+  <main class="ticket-main">
+    <div class="ticket-info">
+      <h3>Important Information</h3>
+      <ul>
+        <li>This is your E-Ticket Itinerary. You must bring it to the airport for check-in, and it is recommended you retain a copy for your records.</li>
+        <li>Each passenger traveling needs a printed copy of this document for immigration, customs, airport security checks, and duty-free purchases.</li>
+        <li>Economy Class passengers should report to airline check-in desks 3 hours prior to departure of all flights. First and Business Class passengers should report to airline check-in desks no later than 1 hour prior to departure. Boarding for your flight begins at least 35 minutes before your scheduled departure time. Gates close 15 minutes prior to departure.</li>
+      </ul>
+    </div>
+    <div class="ticket-table-container">
+      <table *ngIf="passengers.length > 0; else loading" class="ticket-table">
+        <thead>
+          <tr class="ticket-header-row">
+            <td colspan="8">PASSENGER DETAILS</td>
+          </tr>
+          <tr class="ticket-header-row">
+            <th>Full Name</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Booking Class</th>
+            <th>Alternate Phone</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="ticket-info-row" *ngFor="let passenger of passengers; let index = index">
+            <td>{{ passenger.fullname }}</td>
+            <td>{{ passenger.dob }}</td>
+            <td>{{ passenger.gender }}</td>
+            <td>{{ passenger.email }}</td>
+            <td>{{ passenger.phoneNumber }}</td>
+            <td>{{ passenger.bookingClass }}</td>
+            <td>{{ passenger.alternatePhone }}</td>
+            <td>{{ passenger.passengerAge }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <ng-template #loading>
+        <p>No passenger details available.</p>
+      </ng-template>
+    </div>
+  </main>
+</div>

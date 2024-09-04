@@ -1,0 +1,78 @@
+ /* Title : FLIGHT BOOKING
+ Author : TAMILARASAN M
+ Created At : 24-03-2024
+ Last Modified Date : 08-06-2024
+ Reviewed By :
+ Review Date : */
+
+@import url("https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css");
+
+* {
+    font-family: "Poppins", sans-serif;
+
+    box-sizing: border-box;
+}
+
+.Home {
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__links .link {
+    text-decoration: none;
+}
+
+.nav__links .link a {
+    color: #333;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.destinations_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.destinations_container > div {
+    text-align: center;
+}
+
+.destinations_container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
