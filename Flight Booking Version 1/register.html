@@ -1,0 +1,56 @@
+<!-- Title : FLIGHT BOOKING
+Author : TAMILARASAN M
+Created At : 24-03-2024
+Last Modified Date : 08-04-2024
+Reviewed By :
+Review Date : -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Register</title>
+    <link rel="stylesheet" href="style01.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="formcontainer-2">
+        <form class="form2" id="signupForm">
+            <h3 style="text-align: center; font-family: 'Lobster', cursive; font-size: 30px; color: #000;">
+                FLIGHT BOOKING
+            </h3><br>
+            <h1 style="text-align: center;  font-size: 20px; color: #000;">SIGNUP</h1>
+            <input type="text" name="UserName" id="UserName" placeholder="UserName" required>
+            <input type="email" name="Email" id="Email" placeholder="Email" required>
+            <input type="password" name="Password" id="Password" placeholder="Password" required>
+            <input type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder="Confirm Password" required>
+            <button class="signup" type="submit">SIGNUP</button>
+            <p class="signup_button">
+                Already have an account? <a  href="login.html">Login here</a></p>
+            </p>
+        </form>
+    </div>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('UserName').value;
+            const password = document.getElementById('Password').value;
+            const confirmPassword = document.getElementById('ConfirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            if (localStorage.getItem(username)) {
+                alert('User already exists!');
+            } else {
+                localStorage.setItem(username, password);
+                alert('User registered successfully!');
+                document.getElementById('signupForm').reset();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!-- Title : FLIGHT BOOKING
+Author : TAMILARASAN M
+Created At : 24-03-2024
+Last Modified Date : 08-04-2024
+Reviewed By :
+Review Date : -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style01.css" />
+    <script src="script.js" defer></script>
+    <title>My Bookings</title>
+    <style>
+        table.myBooking {
+            width: 96%;
+            border-collapse: collapse;
+            margin: 2%;
+            margin-top: 3%;
+            border: 1px solid #f1f5f9;
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        table.myBooking td {
+            padding: 15px;
+            text-align: center;
+            vertical-align: middle;
+            border-right: 1px solid #f1f5f9;
+        }
+        table.myBooking td:last-child {
+            border-right: none;
+        }
+        table.myBooking td svg {
+            margin: 0 15px;
+        }
+        .myBooking button {
+            cursor: pointer;
+            border-radius: 25px;
+            border: none;
+            font-size: 15px;
+            padding: 0.75rem 2rem;
+            outline: none;
+            color: white;
+            background-color: #ff204e;
+            margin: 0 5px;
+        }
+        .myBooking button:hover {
+            background-color: white;
+            color: #ff204e;
+            border: #ff204e solid 1px;
+        }
+    </style>
+</head>
+<body class="Home">
+    <nav>
+        <div class="nav__logo">FLIGHT BOOKING</div>
+        <ul class="nav__links">
+            <li class="link"><a href="index01.html">Home</a></li>
+            <li class="link"><a href="destinations.html">Popular Destinations</a></li>
+            <li class="link"><a href="#">MY Bookings</a></li>
+        </ul>
+        <a href="login.html"><button class="btn">LOGOUT</button></a>
+    </nav>
+    <hr>
+    <table class="myBooking">
+        <tr>
+            <td>
+                <div>
+                    <p>From</p>
+                    <h3 id="new_from">Delhi</h3>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" viewBox="0 0 25 25"><path style="fill:#000" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p>To</p>
+                    <h3 id="new_to">Mumbai</h3>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p>Depart</p>
+                    <h3 id="new_departure">21 Mar 2024</h3>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p>Return</p>
+                    <h3 id="new_return">29 Mar 2024</h3>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p>Class</p>
+                    <h3>Economy</h3>
+                </div>
+            </td>
+            <td>
+                <a href="#"><button type="submit" class="search">Details</button></a>
+                <a href="#"><button type="submit" class="search">Delete</button></a>
+            </td>
+        </tr>
+    </table>
+    <footer class="footer" id="about_footer" style="margin-top: 33.8%;">
+        <div class="section__container footer__bar">
+            <p>Copyright © 2024 Web Design Mastery. All rights reserved.</p>
+            <div class="socials">
+                <span><i class="ri-facebook-fill"></i></span>
+                <span><i class="ri-twitter-fill"></i></span>
+                <span><i class="ri-instagram-line"></i></span>
+                <span><i class="ri-youtube-fill"></i></span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

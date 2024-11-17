@@ -1,0 +1,80 @@
+<!-- Title : FLIGHT BOOKING
+Author : TAMILARASAN M
+Created At : 24-03-2024
+Last Modified Date : 08-04-2024
+Reviewed By :
+Review Date : -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style01.css"/>
+</head>
+<body class="pay_body">
+    <div class="pay_container">
+        <div class="pay_header"><h1>PAYMENT</h1></div>
+        <div class="pay_info">
+            <table>
+                <form>
+                    <tr>
+                        <td>
+                                <label for="card_number">Card Number</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <input type="number" class ="big-btn" name="card_number" placeholder="Enter Card Number" required="True">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="Card_Holder">Card Holder</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <input type="text"class ="big-btn" name="Card_Holder" placeholder="Enter Card Holder" required="True">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Expiration_MM">Expiration MM</label>
+                        </td>
+                        <td>
+                            <label for="Expiration_yy">Expiration YY</label>
+                        </td>
+                        <td>
+                            <label for="CVV">CVV</label>
+                        </td>
+                        <td>
+                            <label for="Price">Total Price</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <input type="number" class="under-input" name="Expiration_MM"placeholder="Enter Exp MM" min="1" max="12" value="" required="True">
+                        </td>
+                        <td>
+                                <input type="number" class="under-input" name="Expiration_yy" placeholder="Enter Exp YY" min="2024" max="2050" value="" required="True">
+                        </td>
+                        <td>
+                                <input type="number" class="under-input" name="CVV" placeholder="Enter CVV" min="2024" max="2050" value="" required="True">
+                        </td>
+                        <td>
+                            <p class="Total_Price">Rs.1500</p>
+                        </td>
+        
+                    </tr>
+                </form>
+            </table>
+            <div class="pay_btn" >
+                <a href="confirm.html"><button input="submit">SUBMIT</button></a>
+            </div>
+        </div>
+        <img src="/images/bankCard.png" alt="PAYMENT" class="pay1-img">
+    </div>
+</body>
+</html>
