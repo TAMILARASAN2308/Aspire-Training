@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+.addflight_body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #f1f5f9;
+}
+.addflight_container {
+  height: auto;
+  max-width: 930px;
+  width: 100%;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.addflight_header {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.addflight_info label {
+  height: 30px;
+  margin: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.addflight_btn button {
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  font-size: 15px;
+  padding: 0.75rem 2rem;
+  outline: none;
+  background-color: #334c99;
+  color: white;
+}
+.addflight_btn {
+  margin-top: 35px;
+  text-align: center;
+}
+.addflight_btn button:hover {
+  background-color: white;
+  color: #334c99;
+  border: #334c99 solid 1px;
+}
+.addflight_info input,
+textarea,
+select {
+  margin-left: 10px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+.addflight_info input::placeholder {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+.addflight_info textarea::placeholder {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+}
+.addflight_info .input-field {
+  width: 200px;
+}

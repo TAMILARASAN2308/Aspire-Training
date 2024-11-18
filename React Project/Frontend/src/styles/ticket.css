@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.ticket-body {
+    padding: 7% 7%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title {
+    color: rgb(22, 37, 202);
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-left: 10px;
+}
+
+.header-container {
+    text-align: right;
+}
+
+.header-title {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ticket-main {
+    margin-top: 25px;
+}
+
+.ticket-info {
+    margin-bottom: 20px;
+}
+
+.ticket-table-container {
+    margin-top: 25px;
+}
+
+.ticket-table {
+    margin-top: 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 5px 15px;
+}
+
+.ticket-caption {
+    text-align: left;
+    background-color: #a9a9a9;
+    color: white;
+    padding: 8px 15px;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1.4em;
+}
+
+.table-row-even {
+    background-color: #f0f0f0;
+}
+
+.table-row-odd {
+    background-color: white;
+}
+
+.ticket-footer {
+    margin-top: 20px;
+    text-align: center;
+}
