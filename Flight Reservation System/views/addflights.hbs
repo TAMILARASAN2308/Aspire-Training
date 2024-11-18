@@ -1,0 +1,227 @@
+<!-- Title : FLIGHT BOOKING
+Author : TAMILARASAN M
+Created At : 24-05-2024
+Last Modified Date : 08-07-2024
+Reviewed By :
+Review Date : -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Add Flights</title>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+     
+    .addflight_body{
+  display:flex;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  background:  #f1f5f9;
+}
+.addflight_container{
+  height: auto;
+  max-width: 850px;
+  width:100%;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.addflight_header{
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.addflight_info label{
+  height:30px;
+  margin: 20px;
+  padding-left: 30px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+
+.addflight_btn button{
+  cursor: pointer;
+  border-radius:25px;
+  border: none;
+  font-size: 15px;
+  padding: 0.75rem 2rem;
+  outline: none;
+  background-color:#334c99;
+  color: white;
+}
+.addflight_btn{
+  margin-top: 35px;
+  text-align: center;
+}
+.addflight_btn button:hover{
+  background-color: white;
+  color:#334c99;
+  border:#334c99 solid 1px;
+}
+.addflight_info input,textarea,select{
+  margin-left: 10px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+.addflight_info input::placeholder{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px
+
+}
+.addflight_info textarea::placeholder{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px
+}
+.addflight_info .input-field {
+    width: 200px; 
+}
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.link a {
+    font-weight: 500;
+    color: #64748b;
+    text-decoration: none;
+}
+
+.link a:hover {
+    color: #0f172a;
+}
+
+.btn {
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #3d5cb8;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    text-decoration: none; 
+}
+
+.btn:hover {
+    background-color: #334c99;
+}
+
+</style>
+<body class="addflight_body">
+    <nav>
+      <div class="nav__logo">FLIGHT BOOKING</div>
+      <ul class="nav__links">
+        <li class="link"><a href="/admin">Home</a></li>
+          <li class="link"><a href="/addflights">Add Flights</a></li>
+           <li class="link"><a href="/addedflights">Added Flights</a></li>
+          <li class="link"><a href="/bookingsdetails">Bookings Details </a></li>
+         
+      </ul>
+      <a href="/login"><button class="btn">LOGOUT</button></a>
+    </nav>
+    <div class="addflight_container">
+        <div class="head_info">
+            <div class="addflight_header"><h1 id="addflightHeader">FLIGHT INFORMATION</h1></div>
+            <div class="addflight_info">
+                <table>
+                    <form id="my_form" class="addflight_form" action="/auth/addflights" method="post">
+                        <tr>
+    <td><label for="from_location">From Location</label></td>
+    <td><input type="text" name="FROM_LOCATION" id="from_location" placeholder="Enter from location" required></td>
+    <td><label for="to_location">To Location</label></td>
+    <td><input type="text" name="TO_LOCATION" id="to_location" placeholder="Enter to location" required></td>
+</tr>
+<tr>
+    <td><label for="departure_date">Departure Date</label></td>
+    <td><input type="date" name="DEPARTURE_DATE" id="departure_date" required></td>
+    <td><label for="return_date">Return Date</label></td>
+    <td><input type="date" name="RETURN_DATE" id="return_date" required></td>
+</tr>
+<tr>
+    <td><label for="departure_time">Departure Time</label></td>
+    <td><input type="time" name="DEPARTURE_TIME" id="departure_time" required></td>
+    <td><label for="arrival_time">Arrival Time</label></td>
+    <td><input type="time" name="ARRIVAL_TIME" id="arrival_time" required></td>
+</tr>
+<tr>
+    <td><label for="flight_name">Flight Name</label></td>
+    <td><input type="text" name="FLIGHT_NAME" id="flight_name" placeholder="Enter flight name" required></td>
+    <td><label for="ticket_price">Ticket Price</label></td>
+    <td><input type="number" name="TICKET_PRICE" id="ticket_price" placeholder="Enter ticket price" required></td>
+</tr>
+
+                    </form>
+                </table>
+            </div>
+        </div>
+       <div class="addflight_btn">
+    <button type="submit" id="submitBtn" class="btn" style="margin-left: 40px;">SUBMIT</button>
+</div>
+
+    </div>
+    <script>
+    document.getElementById("submitBtn").addEventListener("click", function(event) {
+            event.preventDefault();
+            const fromLocation = document.getElementById("from_location").value;
+            const toLocation = document.getElementById("to_location").value;
+            const departureDate = document.getElementById("departure_date").value;
+            const returnDate = document.getElementById("return_date").value;
+            const flightName = document.getElementById("flight_name").value;
+            const departureTime = document.getElementById("departure_time").value;
+            const ticketPrice = document.getElementById("ticket_price").value;
+
+           
+            const flightDepartureTime = ""; 
+            const arrivalTime = "";
+
+            if (!fromLocation || !toLocation || !departureDate || !returnDate || !flightName || !departureTime || !ticketPrice) {
+                alert("Please fill in all fields before submitting.");
+            } else {
+                 document.querySelectorAll(".addflight_form").forEach(function(form) {
+            form.submit();
+            })
+        }
+        });
+    </script>
+</body>
+</html>

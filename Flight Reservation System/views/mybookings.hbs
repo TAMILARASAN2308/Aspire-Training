@@ -1,0 +1,99 @@
+<!-- Title : FLIGHT BOOKING
+Author : TAMILARASAN M
+Created At : 24-05-2024
+Last Modified Date : 08-07-2024
+Reviewed By :
+Review Date : -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>My Bookings</title>
+  </head>
+  <body class="Home">
+    <nav>
+      <div class="nav__logo">FLIGHT BOOKING</div>
+      <ul class="nav__links">
+        <li class="link"><a href="index">Home</a></li>
+        <li class="link"><a href="destinations">Popular Destinations</a></li>
+        <li class="link"><a href="#">MY Bookings</a></li>
+      </ul>
+      <a href="/login"><button class="btn">LOGOUT</button></a>
+    </nav>
+    <hr>
+    <table class="myBooking">
+      {{#each rows}}
+      <tr data-id="{{this.ID}}">
+        <td>
+          <div>
+            <p>From</p>
+            <h3 id="new_from">{{this.FROMLOCATION}}</h3>
+          </div>
+        </td>
+        <td>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50px" viewBox="0 0 25 25">
+              <path style="fill:#000" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
+            </svg>
+          </div>
+        </td>
+        <td>
+          <div>
+            <p>To</p>
+            <h3 id="new_to">{{this.TOLOCATION}}</h3>
+          </div>
+        </td>
+        <td>
+          <div>
+            <p>Depart</p>
+            <h3 id="new_departure">{{this.DEPARTUREDATE}}</h3>
+          </div>
+        </td>
+        <td>
+          <div>
+            <p>Return</p>
+            <h3 id="new_return">{{this.RETURNDATE}}</h3>
+          </div>
+        </td>
+        <td>
+          <div>
+            <p>Class</p>
+            <h3 id="Economy">{{this.CLASS}}</h3>
+          </div>
+        </td>
+        <td>
+          <div>
+            <h3 class="bookings_status">{{this.STATUS}}</h3>
+          </div>
+        </td>
+        <td>
+          <a href="/ticket/{{this.ID}}">
+            <button type="button" class="mybookings_details">Details</button>
+          </a>
+          <form action="/mybookings/cancel/{{this.ID}}" method="POST" class="delete-form" style="display:inline;">
+          <button type="submit" class="mybookings_cancel">Cancel Booking</button>
+        </form>
+        </td>
+      </tr>
+      {{/each}}
+    </table>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const statusElements = document.querySelectorAll(".bookings_status");
+
+  statusElements.forEach((element) => {
+    if (element.textContent.trim() === 'Cancelled') {
+      element.style.color = 'red';
+    } else {
+      element.style.color = 'rgb(27, 235, 27)';
+    }
+  });
+});
+
+  </script>
+</html>

@@ -1,0 +1,273 @@
+<!-- Title : FLIGHT BOOKING
+Author : TAMILARASAN M
+Created At : 24-05-2024
+Last Modified Date : 08-07-2024
+Reviewed By :
+Review Date : -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href=""/>
+     <script src="/js/script.js" defer></script>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+    
+    .pay_body{
+    display:flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background:  #f1f5f9;
+}
+.pay_container{
+    position: relative;
+    height: 370px;
+    max-width: 850px;
+    width:100%;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+.pay_header{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+.pay_btn button{
+    cursor: pointer;
+    border-radius:25px;
+    border: none;
+    font-size: 15px;
+    padding: 0.75rem 2rem;
+    outline: none;
+    color:white;
+    background-color:#334c99;
+}
+.pay_btn{
+  margin-top: -10px;
+  text-align: center;
+
+}
+.pay_btn button:hover{
+    background-color: white;
+    color:#334c99;
+    border:#334c99 solid 1px;
+}
+.pay_info label{
+    height:30px;
+    margin: 20px;
+    padding-left: 40px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  } 
+.pay_info input{
+    margin-left: 60px;
+    margin-bottom: 15px;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+.under-input{
+    width: 110px;
+}
+
+.pay_info input::placeholder{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px
+  }
+.pay1-img{
+    position: absolute;
+    right: 80px;
+    top: 65px;
+}
+.Total_Price{
+  height:30px;
+  margin-left: 25px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+* {
+    font-family: "Poppins", sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.link a {
+    font-weight: 500;
+    color: #64748b;
+    text-decoration: none;
+}
+
+.link a:hover {
+    color: #0f172a;
+}
+
+.btn {
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #3d5cb8;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    text-decoration: none; 
+}
+
+.btn:hover {
+    background-color: #334c99;
+}
+
+  </style>
+<body class="pay_body">
+    <nav class="nav_bar">
+        <div class="nav__logo">FLIGHT BOOKING</div>
+        <ul class="nav__links">
+          <li class="link"><a href="/index">Home</a></li>
+          <li class="link"><a href="/destinations">Popular Destinations</a></li>
+          <li class="link"><a href="/mybookings">MY Bookings</a></li>
+          <li class="link"><a href="#about_footer">About</a></li>
+        </ul>
+        <a href="/passenger"><button class="btn">Back</button></a>
+      </nav>
+    <div class="pay_container">
+        <div class="pay_header"><h1>PAYMENT</h1></div>
+        <div class="pay_info">
+            <table>
+                <form  class="payment_form"  action="/auth/payment" method="post">
+                    <tr>
+                        <input type="hidden" name="Card_UserId" id="Card_UserId" />
+                        <td>
+                                <label for="cardNumber">Card Number</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <input type="number" class ="big-btn" name="CardNumber" id="CardNumber" placeholder="Enter Card Number" required="True">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="CardHolder">Card Holder</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <input type="text"class ="big-btn" name="CardHolder" id="CardHolder" placeholder="Enter Card Holder" required="True">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ExpirationMM">Expiration MM</label>
+                        </td>
+                        <td>
+                            <label for="Expirationyy">Expiration YY</label>
+                        </td>
+                        <td>
+                            <label for="CVV">CVV</label>
+                        </td>
+                        <td>
+                            <label for="Price">Total Price</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <input type="number" class="under-input" name="ExpirationMM" id="ExpirationMM" placeholder="Enter Exp MM" min="1" max="12" value="" required="True">
+                        </td>
+                        <td>
+                                <input type="number" class="under-input" name="Expirationyy"  id="Expirationyy" placeholder="Enter Exp YY" min="2024" max="2050" value="" required="True">
+                        </td>
+                        <td>
+                                <input type="number" class="under-input" name="CVV" id="CVV" placeholder="Enter CVV" required="True">
+                        </td>
+                        <td>
+                            <p class="Total_Price" id="tp">Rs.1000</p>
+
+                        </td>
+                    </tr>
+                </form>
+            </table>
+             <div class="pay_btn">
+                <button  type="submit" id="pay-submit">SUBMIT</button>
+            </div>
+        </div>
+        <img src="/images/bankCard.png" alt="PAYMENT" class="pay1-img">
+    </div>
+     <script>
+        const store_UserId = localStorage.getItem('userId');
+        console.log("Stored UserId:", store_UserId);
+        if (store_UserId) {
+                      document.getElementById('Card_UserId').value = store_UserId;
+                      let val = document.getElementById('Card_UserId').value
+                      console.log(val);
+        } else {
+                      console.log("User ID is not found in localStorage.");
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const flightPrice = localStorage.getItem("flightPrice");
+            let totalPriceElement = document.getElementById("tp");
+            totalPriceElement.textContent = flightPrice;
+            console.log("Flight Price:", flightPrice);
+
+            document.getElementById("pay-submit").addEventListener("click", function(event) {
+                event.preventDefault();
+                const Card_UserId = document.getElementById("Card_UserId").value;
+                const CardNumber = document.getElementById("CardNumber").value;
+                const CardHolder = document.getElementById("CardHolder").value;
+                const ExpirationMM = document.getElementById("ExpirationMM").value;
+                const ExpirationYY = document.getElementById("Expirationyy").value;
+                const CVV = document.getElementById("CVV").value;
+                if (!Card_UserId|| !CardNumber || !CardHolder || !ExpirationMM || !ExpirationYY || !CVV) {
+                    alert("Please fill in all fields before submitting.");
+                } else {
+                    document.querySelectorAll(".payment_form").forEach(function(form) {
+                        form.submit();
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
