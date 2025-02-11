@@ -1,0 +1,67 @@
+ <!-- Title : FLIGHT BOOKING
+ Author : TAMILARASAN M
+ Created At : 24-05-2024
+ Review Date :
+ Last Modified Date : 08-011-2024
+ Reviewed By : -->
+
+<app-nav-bar></app-nav-bar>
+<div class="cart-container">
+  <h1>Shopping Cart</h1>
+  <div class="cart-details" *ngIf="cartCount > 0">
+  <h3>Your Cart: {{ cartCount }}</h3>
+  <table class="myBooking">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems">
+        <td>
+          <img [src]="item.product.images[0].image" alt="{{ item.product.name }}" width="50">
+          <a id="product_name" [routerLink]="['/product', item.product._id.$oid]">{{ item.product.name }}</a>
+        </td>
+        <td>{{ item.product.category }}</td>
+        <td> ₹ {{ item.product.price }}</td>
+        <td>
+          <div class="quantity-selector">
+            <button class="decrement-btn" (click)="decreaseQty(item)">-</button>
+            <input type="number" class="quantity-input" [(ngModel)]="item.qty" min="1" />
+            <button class="increment-btn" (click)="increaseQty(item)">+</button>
+          </div>
+        </td>
+        <td> ₹ {{ (item.product.price * item.qty)}}</td>
+        <td>
+          <button class="action-button remove-button" (click)="removeFromCart(item.product._id)">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="cart-summary">
+    <h3>Summary</h3>
+    <div class="summary-item">
+      <div>
+        <span>SubTotal:&nbsp;</span>
+      <span>{{subTotal}}</span>
+      </div>
+      <div>
+        <span>Total:&nbsp;</span>
+        <span>₹{{ getTotal() }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="checkout-options">
+    <button class="checkout-button" (click)="checkout()">Checkout</button>
+    <button class="continue-shopping" [routerLink]="['/']">Continue Shopping</button>
+  </div>
+</div>
+<div *ngIf="cartCount === 0">
+  <p>Your cart is empty!</p>
+</div>
+</div>

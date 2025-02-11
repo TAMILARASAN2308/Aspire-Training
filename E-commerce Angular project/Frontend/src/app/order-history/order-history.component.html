@@ -1,0 +1,59 @@
+ <!-- Title : FLIGHT BOOKING
+ Author : TAMILARASAN M
+ Created At : 24-05-2024
+ Review Date :
+ Last Modified Date : 08-011-2024
+ Reviewed By : -->
+
+<app-nav-bar></app-nav-bar>
+<h2 class="order-history-title">Order History</h2>
+<table class="myBooking">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Image</th>
+      <th>Category</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders" [attr.data-id]="order._id">
+      <td>
+        <div>
+          <p>{{ order.cartItems[0]?.product?.name || 'N/A' }}</p>
+        </div>
+      </td>
+      <td>
+        <div>
+          <img [src]="order.cartItems[0]?.product?.images[0]?.image || 'placeholder.jpg'" alt="{{ order.cartItems[0]?.product?.name || 'No Image' }}" class="product-image" />
+        </div>
+      </td>
+      <td>
+        <div>
+          <p>{{ order.cartItems[0]?.product?.category || 'N/A' }}</p>
+        </div>
+      </td>
+      <td>
+        <div>
+          <p>{{ order.cartItems[0]?.qty || 0 }}</p>
+        </div>
+      </td>
+      <td>
+        <div>
+          <p>₹ {{ (order.cartItems[0]?.product?.price || 0) * (order.cartItems[0]?.qty || 0) }}</p>
+        </div>
+      </td>
+      <td>
+        <div>
+          <p class="bookings_status">{{ order.status || 'N/A' }}</p>
+        </div>
+      </td>
+      <td>
+        <button (click)="onDelete(order._id)" class="mybookings_cancel">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

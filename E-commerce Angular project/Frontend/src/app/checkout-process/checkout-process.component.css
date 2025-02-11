@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+.checkout-container h2{
+    margin: 15px;
+}
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: #f1f5f9;
+}
+
+.checkout-header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.address-section, .cart-products-section, .payment-method-section {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.address-section h3, .cart-products-section h3, .payment-method-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.address-section form, .payment-method-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-section label, .payment-method-section label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.address-section input, .payment-method-section input {
+  margin-bottom: 15px;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+}
+
+.cart-products-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-products-section table, th, td {
+  border: 1px solid #ddd;
+}
+
+.cart-products-section th, .cart-products-section td {
+  padding: 8px;
+  text-align: left;
+}
+
+.payment-method-section .card-details {
+  display: none;
+  flex-direction: column;
+}
+
+.payment-method-section .card-details.active {
+  display: flex;
+}
+
+.payment-method-section .card-details label {
+  margin-bottom: 5px;
+}
+
+.payment-method-section .card-details input {
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.proceed-btn {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.proceed-btn{
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  font-size: 15px;
+  padding: 0.75rem 2rem;
+  outline: none;
+  color: white;
+  background-color: #334c99;
+}
+
+.proceed-btn:hover {
+  background-color: white;
+  color: #334c99;
+  border: #334c99 solid 1px;
+}

@@ -1,0 +1,64 @@
+/* Container and title styling */
+
+
+.order-history-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Table styling */
+table.myBooking {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+table.myBooking th, table.myBooking td {
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+table.myBooking th {
+  background-color: rgb(98, 95, 95);
+  color: white;
+  font-weight: bold;
+}
+
+table.myBooking tr:hover {
+  background-color: #f9f9f9;
+}
+
+table.myBooking td:last-child {
+  border-right: none;
+}
+
+/* Button styling */
+.mybookings_cancel {
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  font-size: 14px;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  background-color: #ff204e;
+  transition: all 0.3s ease;
+}
+
+.mybookings_cancel:hover {
+  background-color: white;
+  color: #ff204e;
+  border: 1px solid #ff204e;
+}
+
+.product-image {
+  max-width: 80px;
+  height: auto;
+  border-radius: 5px;
+}

@@ -1,0 +1,25 @@
+ <!-- Title : FLIGHT BOOKING
+ Author : TAMILARASAN M
+ Created At : 24-05-2024
+ Review Date :
+ Last Modified Date : 08-011-2024
+ Reviewed By : -->
+
+<nav class="navbar">
+  <div class="main-nav">
+    <a [routerLink]="['/']">Home</a>
+    <div class="search-nav">
+      <input type="text" placeholder="Search for products" class="search-input"[(ngModel)]="searchText" (input)="clearSearch()" (keydown.enter)="searchByEnterKey()" style="margin-left: 20px;">
+      <button (click)="search()" class="search-button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-search" viewBox="0 0 16 16" width="20" height="20">
+          <path fill-rule="evenodd" d="M11.742 10.344a5.5 5.5 0 1 1 1.154-1.154l3.5 3.5-1.414 1.414-3.5-3.5zM12 6.5a5.5 5.5 0 1 0-11 0 5.5 5.5 0 0 0 11 0z"/>
+        </svg>
+      </button>
+    </div>
+    <a [routerLink]="['/cart']" style="margin-left: 20px;">Shopping Cart</a>
+    <a routerLink="/order-history" style="margin-left: 20px;">Order History</a>
+  </div>
+  <div class="auth-nav">
+    <a routerLink="/login">Logout</a>
+  </div>
+</nav>

@@ -1,0 +1,75 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #334c99;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: white;
+  color: #334c99;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.main-nav, .auth-nav {
+  display: flex;
+}
+
+.auth-nav a {
+  background-color: #334c99;
+  margin-left: 10px;
+}
+
+.auth-nav a:hover {
+  background-color:white;
+  border-radius: 5px 5px 5px 5px;
+}
+.search-nav {
+  display: flex;
+  align-items: center;
+
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  outline: none;
+
+}
+
+.search-button {
+  padding: 10px 15px;
+  border: 0px solid white;
+  background-color: white;
+  color: white;
+  font-size: 16px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  height:40px;
+}
+
+.search-button:hover {
+  background-color: #334c99;
+
+}
+
+.search-button:hover svg {
+  fill:  white;
+}
